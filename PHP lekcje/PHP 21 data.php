@@ -12,9 +12,11 @@
     echo "<br> teraz: " . date( "d.m.Y h:i:sa", $now);
 ?>
 
+<h3></h3>
+
 <?php
-$date = date('m/d/Y');
+$date = date('d/m/Y');
 echo $date;
 echo "<br>";
-echo date("m/d/Y", strtotime("+14 day"));
+echo date("d/m/Y", strtotime("+14 day"));
 ?>
