@@ -63,3 +63,25 @@ if(preg_match($wzorzec, $tekst))
 else
     echo "nie znaleziono daty";
 ?>
+
+<h3></h3>
+
+<?php //wyszukiwanie adres email
+$wzorzec = '/[-\w.]+@([-A-z0-9]+\.)+[A-z]/';
+$tekst = "email: john@poczta.eu";
+if(preg_match($wzorzec, $tekst))
+    echo " znaleziono " . $tekst;
+else
+    echo 'nie znaleziono email';
+?>
+
+<h3></h3>
+
+<?php
+    $wzorzec = '/((\bhttps?:\/\/)|(\bwww\.))\S*/';
+    $tekst = "adres: www.zsgsucha.pl";
+    if(preg_match( $wzorzec, $tekst))
+     echo "znaleziono stronę: " . $tekst;
+    else  
+        echo "nie znaleziono adresu www";
+?>
