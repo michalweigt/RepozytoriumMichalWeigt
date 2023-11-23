@@ -1,0 +1,4 @@
+SELECT nazwa FROM towary WHERE promocja = 1;
+SELECT cena FROM towary WHERE nazwa LIKE "cienkopis";
+SELECT dostawcy.nazwa, count(towary.idDostawcy) as ilość FROM dostawcy, towary WHERE dostawcy.id = towary.idDostawcy GROUP BY dostawcy.nazwa;
+alter table dostawcy add COLUMN e_mail text;
