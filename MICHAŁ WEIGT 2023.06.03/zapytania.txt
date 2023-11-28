@@ -1,0 +1,4 @@
+SELECT imie, nazwisko FROM autorzy
+INSERT INTO czytelnicy(`imie`, `nazwisko`, `kod`) VALUES ('Anna', 'Michalak', 'ANMI05');
+SELECT tytul FROM ksiazki WHERE id_kategoria = 3;
+SELECT ksiazki.tytul FROM ksiazki, wypozyczenia WHERE wypozyczenia.id_ksiazka = ksiazki.id and wypozyczenia.id_czytelnik = 3;
